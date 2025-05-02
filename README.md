@@ -20,3 +20,5 @@ The official Unity SDK for Algorand is deprecated. WalletConnect v2 integration 
 4. Game calls your Node.js API to confirm ownership by:
    - Fetching recent transactions via indexer
    - Looking for a note `{appName}-{userId}` within last 5 minutes
+
+![image](https://github.com/user-attachments/assets/6ce4d572-d608-43c2-ba62-e7e7f0ba976b)
