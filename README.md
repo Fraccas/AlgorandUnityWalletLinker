@@ -31,6 +31,7 @@ In your `users.controller.js`, add:
 exports.ConfirmWallet = async (req, res) => {
   const userId = req.jwt.userId;
   const wallet = req.body.wallet;
+  const appName = "fracctal";
 
   if (!wallet || typeof wallet !== "string")
     return res.status(400).send({ error: "Missing wallet address" });
@@ -52,7 +53,7 @@ exports.ConfirmWallet = async (req, res) => {
 
       try {
         const noteString = Buffer.from(noteBase64, 'base64').toString('utf8');
-        const expectedNote = `fracctaltcg-${userId}`;
+        const expectedNote = `${appName}-${userId}`;
         const now = Math.floor(Date.now() / 1000);
         const txnTime = txn["round-time"];
         return noteString === expectedNote && Math.abs(now - txnTime) <= 300;
