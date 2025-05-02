@@ -19,7 +19,7 @@ The official Unity SDK for Algorand is deprecated. WalletConnect v2 integration 
 3. User signs the transaction with Pera Wallet.
 4. Game calls your Node.js API to confirm ownership by:
    - Fetching recent transactions via indexer
-   - Looking for a note `fracctaltcg-{userId}` within last 5 minutes
+   - Looking for a note `{appName}-{userId}` within last 5 minutes
 
 ---
 
